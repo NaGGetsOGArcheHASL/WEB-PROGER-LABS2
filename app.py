@@ -1,11 +1,11 @@
-from flask import Flask
+from flask import Flask, redirect, url_for
 app = Flask(__name__)
 
 @app.route("/")
 @app.route("/index")
 def start():
     return redirect("/menu", code = 302)
-    
+
 @app.route("/menu")
 def menu():
     return """
@@ -39,6 +39,7 @@ def lab1():
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Нагайцев Максим Алексеевич, Лабораторная работа 1</title>
+        <link rel="stylesheet" href=" """ + url_for('static', filename='lab1.css') + """ ">
     </head>
     <body>
         <header>
