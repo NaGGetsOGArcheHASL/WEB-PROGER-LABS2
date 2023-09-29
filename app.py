@@ -61,3 +61,25 @@ def lab1():
     </body>
     </html>
 """
+
+@app.route('/lab1/oak')
+def oak():
+    return '''
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" ''' + url_for('static', filename='lab1.css') + ''' ">
+    <title>Dub</title>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 1
+    </header>
+    <h1>Дуб</h1>
+    <img src=" ''' + url_for('static', filename='oak.jpg') + ''' ">
+    
+</body>
+</html>
+'''
