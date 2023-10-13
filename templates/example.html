@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Нагайцев Максим. {{nomerlaba}}</title>
+    <title>
+        {% if name %}
+            {{name}},
+        {% else %}
+            Анонимус,
+        {% endif %}
+        {% if nomerlaba %} Лабораторная работа 2{% endif %}
+    </title>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 </head>
 <body>
     <header>
-        WEB-программирование, часть 2. {{nomerlaba}}
+        WEB-программирование, часть 2. {% if nomerlaba %} Лабораторная работа 2{% endif %}
     </header>
 
     <main>
@@ -19,7 +26,26 @@
     </main>
 
     <footer>
-        &copy; {{name}}, {{group}}, {{kurs}}, 2023
+        &copy; 
+        {% if name %}
+            {{name}},
+        {% else %}
+            Анонимус,
+        {% endif %}
+        
+        {% if group %}
+            {{group}},
+        {% else %}
+            CENTRE,
+        {% endif %} 
+         
+        {% if kurs %}
+            {{ kurs }},
+        {% else %}
+             Только вперед!,
+        {% endif %}
+        
+        2023
     </footer>
 </body>
 </html>

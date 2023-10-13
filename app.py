@@ -89,5 +89,5 @@ def example():
     name = 'Нагайцев Максим'
     group = 'ФБИ-12'
     kurs = '3 курс'
-    nomerlaba = 'Лабораторная работа 2'
-    return render_template('example.html', name=name, group=group, kurs=kurs, nomerlaba=nomerlaba)
+    nomerlaba = '2'
+    return render_template('example.html')
