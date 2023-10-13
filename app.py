@@ -87,4 +87,7 @@ def oak():
 @app.route('/lab2/example')
 def example():
     name = 'Нагайцев Максим'
-    return render_template('example.html', name=name)
+    group = 'ФБИ-12'
+    kurs = '3 курс'
+    nomerlaba = 'Лабораторная работа 2'
+    return render_template('example.html', name=name, group=group, kurs=kurs, nomerlaba=nomerlaba)
