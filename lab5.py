@@ -62,7 +62,7 @@ def registerPage():
         return render_template("register.html", errors=errors)
     
 
-    hashPassword = generate_password_hash(password)
+    hashPassword = generate_password_hash(password, method='pbkdf2')
     
     conn = dbConnect ()
     cur = conn.cursor()
